@@ -1,0 +1,197 @@
+.footerSection {
+  width: 100%;
+  background-color: #030810;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 60px 0 var(--space-6) 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.col1, .col2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logoBox {
+  width: 40px;
+  height: 40px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid var(--blue-border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--blue);
+  box-shadow: 0 0 15px var(--blue-glow);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 300px;
+  margin: 0;
+}
+
+.socialRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 18px;
+  transition: all 0.3s ease;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  min-height: 40px;
+}
+
+.socialIcon:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: var(--blue-border);
+  color: var(--blue);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+/* Green WhatsApp glow on hover */
+.whatsappIcon:hover {
+  background: rgba(37, 211, 102, 0.08);
+  border-color: rgba(37, 211, 102, 0.55);
+  color: #25D366;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.35);
+}
+
+.colTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Reduced gap between links */
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* ONLY 8px gap */
+}
+
+/* Reduced padding, smaller font, and height reset */
+.footerLink {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  padding: 4px 0; /* Reduced padding */
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  min-height: auto; /* Reset min-height */
+}
+
+.footerLink:hover {
+  color: var(--blue);
+  padding-left: 6px;
+}
+
+.bottomBar {
+  margin-top: 60px;
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.copyright {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+}
+
+.madeWith {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+}
+
+/* Tablet & Desktop media queries (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .footerSection {
+    padding: 80px 0 var(--space-8) 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Exactly 2 columns: 2fr and 1fr */
+    gap: 60px;
+  }
+
+  .bottomBar {
+    margin-top: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright, .madeWith {
+    text-align: center;
+  }
+}

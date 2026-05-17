@@ -1,0 +1,135 @@
+.contactSection {
+  width: 100%;
+  background-color: var(--bg-root);
+  padding: var(--section-padding-y) 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px; /* Centered 700px width */
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-align: left;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.5px;
+}
+
+.subheadline {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: left;
+  max-width: 100%;
+  margin-bottom: var(--space-10);
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contactCard {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsappCard {
+  border-left: 3px solid var(--whatsapp);
+}
+
+.whatsappCard:hover {
+  border-left-color: var(--whatsapp);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.1);
+  transform: translateY(-4px);
+}
+
+.calendlyCard {
+  border-left: 3px solid var(--purple);
+}
+
+.calendlyCard:hover {
+  border-left-color: var(--purple);
+  box-shadow: 0 10px 30px rgba(129, 140, 248, 0.1);
+  transform: translateY(-4px);
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.cardSubtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-6) 0;
+  line-height: 1.4;
+}
+
+.backgroundGlow {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Tablet & Desktop media queries (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .headline {
+    font-size: var(--text-4xl);
+    letter-spacing: -1px;
+  }
+
+  .cardsWrapper {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .contactCard {
+    flex: 1;
+    padding: 32px 28px;
+  }
+}

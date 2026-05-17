@@ -1,0 +1,168 @@
+{
+  "personal": {
+    "name": "Lakshay Nagda",
+    "title": "Web Developer & App Builder",
+    "tagline": "We Build Digital Systems That Turn Visitors Into Clients",
+    "subtagline": "Stop losing leads. We design high-converting websites, mobile apps & automation funnels that work 24/7 — so you don't have to.",
+    "availability": "Available for New Projects",
+    "location": "Jaipur, Rajasthan, India",
+    "email": "hello@lakshaynagda.com",
+    "whatsapp": "+91-XXXXXXXXXX",
+    "whatsappLink": "https://wa.me/91XXXXXXXXXX",
+    "calendlyLink": "https://calendly.com/lakshaynagda",
+    "heroImage": "/assets/images/lakshay.png",
+    "customCodeBadge": "100% Custom Code — No Templates. No Themes. Just Yours."
+  },
+  "social": {
+    "github": "https://github.com/lakshaynagda",
+    "linkedin": "https://linkedin.com/in/lakshaynagda",
+    "instagram": "https://instagram.com/lakshaynagda",
+    "twitter": "https://twitter.com/lakshaynagda",
+    "youtube": "https://youtube.com/@lakshaynagda",
+    "behance": "https://behance.net/lakshaynagda"
+  },
+  "stats": [
+    { "number": "47+", "label": "Projects Delivered" },
+    { "number": "3x",  "label": "Avg ROI" },
+    { "number": "98%", "label": "Client Satisfaction" },
+    { "number": "20+", "label": "Hrs Saved/Week" }
+  ],
+  "techStack": [
+    { "name": "React",       "iconName": "SiReact",       "color": "#61DAFB" },
+    { "name": "Next.js",     "iconName": "SiNextdotjs",   "color": "#ffffff" },
+    { "name": "Vue",         "iconName": "SiVuedotjs",    "color": "#4FC08D" },
+    { "name": "Node.js",     "iconName": "SiNodedotjs",   "color": "#339933" },
+    { "name": "TypeScript",  "iconName": "SiTypescript",  "color": "#3178C6" },
+    { "name": "Figma",       "iconName": "SiFigma",       "color": "#F24E1E" },
+    { "name": "Flutter",     "iconName": "SiFlutter",     "color": "#02569B" },
+    { "name": "Firebase",    "iconName": "SiFirebase",    "color": "#FFCA28" },
+    { "name": "MongoDB",     "iconName": "SiMongodb",     "color": "#47A248" },
+    { "name": "PostgreSQL",  "iconName": "SiPostgresql",  "color": "#4169E1" },
+    { "name": "Tailwind",    "iconName": "SiTailwindcss", "color": "#06B6D4" },
+    { "name": "Zapier",      "iconName": "SiZapier",      "color": "#FF4A00" },
+    { "name": "AWS",         "iconName": "SiAmazonaws",   "color": "#FF9900" },
+    { "name": "Docker",      "iconName": "SiDocker",      "color": "#2496ED" },
+    { "name": "Stripe",      "iconName": "SiStripe",      "color": "#635BFF" },
+    { "name": "GraphQL",     "iconName": "SiGraphql",     "color": "#E10098" }
+  ],
+  "painPoints": {
+    "headline": "Still Doing Everything Manually?",
+    "subheadline": "Your competitors are automating. You're still copy-pasting leads into spreadsheets.",
+    "points": [
+      { "title": "Wasting Hours on Repetitive Tasks" },
+      { "title": "Losing Leads Because Follow-up is Slow" },
+      { "title": "No System to Track Clients & Projects" },
+      { "title": "Spending on Ads But No Proper Funnel" }
+    ],
+    "transitionText": "There's a smarter way"
+  },
+  "services": {
+    "headline": "Done Manually = Done Slowly.",
+    "subheadline": "Everything custom-built from scratch. No templates. No drag-and-drop. Just clean code built for your business.",
+    "items": [
+      {
+        "title": "Conversion Websites",
+        "desc": "Not just pretty sites. Custom-coded, blazing fast websites built to capture leads, book calls, and sell — 24/7.",
+        "features": ["Custom code only — no templates", "Mobile-first & lightning fast", "Lead capture & CTA optimized", "SEO-ready from day one"]
+      },
+      {
+        "title": "Web & Mobile Apps",
+        "desc": "From client portals to SaaS dashboards to Flutter mobile apps. We build what your business actually needs.",
+        "features": ["React / Next.js web apps", "Flutter mobile apps (iOS & Android)", "Admin dashboards & CRMs", "API integrations & backend"]
+      },
+      {
+        "title": "Workflow Automation",
+        "desc": "Connect your tools. Kill repetitive tasks. We automate your entire workflow so your team focuses on what matters.",
+        "features": ["Zapier, n8n, Make automations", "CRM & lead management", "Auto follow-ups & notifications", "Save 20+ hours every week"]
+      }
+    ]
+  },
+  "projects": {
+    "headline": "Built by Us.",
+    "subheadline": "Real projects. Real results. All custom-built from scratch.",
+    "items": [
+      {
+        "id": 1,
+        "title": "Yoga Coach Website",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020901/Screenshot_2026-05-17_175321_mx0kgm.png",
+        "liveUrl": "https://www.aerobicsyug.in/"
+      },
+      {
+        "id": 2,
+        "title": "Life Coach Website",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020919/Screenshot_2026-05-17_175314_pevdpd.png",
+        "liveUrl": "https://www.sukeeshi.com/"
+      },
+      {
+        "id": 3,
+        "title": "Style Cues by Anugna",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020912/Screenshot_2026-05-17_175258_jkrwkv.png",
+        "liveUrl": "https://www.stylecuesbyanugna.com/"
+      },
+      {
+        "id": 4,
+        "title": "Community Website",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020920/Screenshot_2026-05-17_175250_a5kqrj.png",
+        "liveUrl": "https://powerpack-blue.vercel.app/"
+      },
+      {
+        "id": 5,
+        "title": "Fitness Coach Website",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020899/Screenshot_2026-05-17_175306_mvptvr.png",
+        "liveUrl": "https://coachabhi.vercel.app/"
+      },
+      {
+        "id": 6,
+        "title": "Portfolio Website",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020921/Screenshot_2026-05-17_175332_dak7jh.png",
+        "liveUrl": "https://www.kunalgupta.site/"
+      }
+    ]
+  },
+  "process": {
+    "headline": "How It Works",
+    "subheadline": "Simple. Fast. No BS.",
+    "steps": [
+      { "number": "01", "title": "Discovery Call",    "subtitle": "Free · 30 Minutes", "desc": "We understand your business, goals, and what's slowing you down. No pitch — just clarity.", "color": "#38bdf8" },
+      { "number": "02", "title": "Strategy & Design", "subtitle": "Week 1",            "desc": "We map the full funnel, wireframe your site or app, and plan every automation. You approve before we build.", "color": "#818cf8" },
+      { "number": "03", "title": "Build & Automate",  "subtitle": "Week 2–4",          "desc": "We develop everything — custom-coded website or app, integrations, workflows. You just review.", "color": "#34d399" },
+      { "number": "04", "title": "Launch & Scale",    "subtitle": "Go Live",           "desc": "We launch, hand over full control, and stay for 30 days support. You focus on growth.", "color": "#fb923c" }
+    ]
+  },
+  "testimonials": {
+    "headline": "Straight From Our Clients",
+    "subheadline": "Real clients. Real results. Watch what they have to say.",
+    "videos": [
+      { "id": 1, "clientName": "Rahul Sharma",  "clientRole": "E-commerce Founder",    "videoUrl": "/assets/testimonials/testimonial1.mp4", "videoPoster": "/assets/testimonials/thumb1.jpg" },
+      { "id": 2, "clientName": "Priya Mehta",   "clientRole": "Agency Owner",          "videoUrl": "/assets/testimonials/testimonial2.mp4", "videoPoster": "/assets/testimonials/thumb2.jpg" },
+      { "id": 3, "clientName": "Arjun Kapoor",  "clientRole": "SaaS Founder",          "videoUrl": "/assets/testimonials/testimonial3.mp4", "videoPoster": "/assets/testimonials/thumb3.jpg" },
+      { "id": 4, "clientName": "Sneha Joshi",   "clientRole": "Clinic Owner",          "videoUrl": "/assets/testimonials/testimonial4.mp4", "videoPoster": "/assets/testimonials/thumb4.jpg" },
+      { "id": 5, "clientName": "Vikram Singh",  "clientRole": "Real Estate Developer", "videoUrl": "/assets/testimonials/testimonial5.mp4", "videoPoster": "/assets/testimonials/thumb5.jpg" }
+    ]
+  },
+  "contact": {
+    "headline": "Let's Talk Business",
+    "subheadline": "Let's build something that works while you sleep. Book a free 30-min strategy call.",
+    "cards": [
+      { "type": "whatsapp", "title": "Let's Chat on WhatsApp", "subtitle": "Reply within 1 hour · Free consultation", "btnLabel": "Open WhatsApp" },
+      { "type": "call",     "title": "Book a Strategy Call",   "subtitle": "Free 30-min call · No pitch, just clarity", "btnLabel": "Book Free Call" }
+    ]
+  },
+  "navbar": {
+    "logo": "LN",
+    "links": [
+      { "label": "Home",         "href": "#hero" },
+      { "label": "Services",     "href": "#services" },
+      { "label": "Projects",     "href": "#projects" },
+      { "label": "Testimonials", "href": "#testimonials" },
+      { "label": "Contact",      "href": "#contact" }
+    ],
+    "ctaLabel": "Book Free Call",
+    "ctaHref": "#contact"
+  },
+  "footer": {
+    "tagline": "Building digital systems that convert.",
+    "copyright": "2026 Lakshay Nagda. All rights reserved.",
+    "madeWith": "Made with love in Jaipur, India"
+  }
+}
