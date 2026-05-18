@@ -63,8 +63,11 @@ const Navbar = () => {
         <div className={styles.container}>
           <div className={styles.left}>
             <a href="#hero" className={styles.logoWrapper}>
-              <div className={styles.logoBox}>{navbar.logo}</div>
-              <span className={styles.logoText}>{data.personal.name}</span>
+              <img
+                src={data.personal.logo}
+                alt={data.personal.logoAlt}
+                className={styles.logoImg}
+              />
             </a>
           </div>
 

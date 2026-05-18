@@ -36,6 +36,13 @@
   gap: var(--space-3);
 }
 
+.logoImg {
+  height: 40px;        /* adjust height to fit footer */
+  width: auto;         /* maintain aspect ratio */
+  object-fit: contain;
+  display: block;
+}
+
 .logoBox {
   width: 40px;
   height: 40px;

@@ -158,9 +158,23 @@
   line-height: 1.2;
 }
 
-/* Hidden on mobile */
-.rightColumn {
+/* Mobile — hide image completely */
+.heroImageWrapper {
   display: none;
+}
+
+/* Remove purple circle background completely */
+.heroImageWrapper::before {
+  display: none !important;
+}
+
+/* Remove any legacy overlay circles if present */
+.circle,
+.imageBg,
+.imgCircle,
+.heroBg {
+  display: none !important;
+  background: none !important;
 }
 
 /* Desktop & Larger Breakpoints (min-width: 1024px) */
@@ -224,47 +238,55 @@
     font-size: var(--text-2xl);
   }
 
-  /* Right column shown on desktop */
-  .rightColumn {
+  /* Desktop only — show image wrapper */
+  .heroImageWrapper {
+    position: relative;
     display: flex;
-    flex: 0.8;
     align-items: center;
     justify-content: center;
-    position: relative;
+    flex: 1;
+    margin-top: -60px; /* upar shift karo */
   }
 
-  .imageWrapper {
-    position: relative;
-    width: 100%;
-    max-width: 420px;
-    aspect-ratio: 4/5;
-    z-index: 2;
-  }
-
-  .heroImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--card-radius-lg);
-    mask-image: radial-gradient(ellipse 75% 85% at 50% 50%, black 55%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 75% 85% at 50% 50%, black 55%, transparent 100%);
-  }
-
-  .blobGlow {
+  /* Blue glow blob — behind image, not circular */
+  .glowBehind {
     position: absolute;
-    width: 90%;
-    height: 90%;
-    top: 5%;
-    left: 5%;
+    width: 580px;      /* image ke saath badha diya */
+    height: 580px;
+    background: radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.18) 0%,
+      transparent 70%
+    );
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
-    filter: blur(70px);
-    z-index: -1;
-    animation: blobFloatEffect 6s ease-in-out infinite alternate;
+    filter: blur(60px);
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 5s ease-in-out infinite alternate;
+  }
+
+  /* Hero image */
+  .heroImg {
+    width: 150%;
+    max-width: 1000px;  /* pehle 480px tha — badha diya */
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.25));
+    animation: float 6s ease-in-out infinite;
   }
 }
 
-@keyframes blobFloatEffect {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(15px, -15px) scale(1.05); }
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  from { opacity: 0.5; transform: translate(-50%, -50%) scale(0.95); }
+  to   { opacity: 1;   transform: translate(-50%, -50%) scale(1.05); }
 }

@@ -41,6 +41,13 @@
   min-height: 44px;
 }
 
+.logoImg {
+  height: 40px;        /* adjust height to fit navbar */
+  width: auto;         /* maintain aspect ratio */
+  object-fit: contain;
+  display: block;
+}
+
 .logoBox {
   width: 40px;
   height: 40px;

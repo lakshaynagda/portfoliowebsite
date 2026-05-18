@@ -43,24 +43,31 @@
   margin-bottom: var(--space-10);
 }
 
+/* Steps Wrapper — CSS Grid for perfect column alignment */
 .stepsWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr; /* Default mobile single column */
+  gap: 14px;
   width: 100%;
   box-sizing: border-box;
 }
 
+/* Card — fills grid cell completely */
 .stepCard {
-  width: 100%;
+  width: 100%;        /* fill grid cell */
+  min-width: 0;       /* allow shrink */
+  padding: 28px 24px; /* comfortable inner padding */
+  border-radius: var(--card-radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid; /* Solid left border with dynamic color inline */
+  backdrop-filter: var(--glass-blur);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  padding: 24px;
-  border-left: 3px solid; /* Solid left border with dynamic color inline */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .watermark {
@@ -81,61 +88,48 @@
   position: relative;
   z-index: 1;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* space between elements in the card */
 }
 
+/* Title — no forced wrap */
 .title {
-  font-family: var(--font-body);
-  font-size: var(--text-lg);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: var(--space-1);
+  line-height: 1.2;
+  word-break: normal;   /* DO NOT break words */
+  hyphens: none;        /* NO hyphens */
+  margin: 0;
 }
 
+/* Subtitle */
 .subtitle {
-  font-family: var(--font-body);
   font-size: var(--text-xs);
   font-weight: 600;
-  color: var(--text-secondary);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: var(--space-2);
-  opacity: 0.8;
+  color: var(--text-muted);
+  margin: 0;
 }
 
+/* Description */
 .desc {
-  font-family: var(--font-body);
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
 }
 
-/* Connector System for Mobile */
+/* Hide connectors so the Grid displays beautifully without taking up columns */
 .mobileConnector {
-  width: 3px;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.08);
-  margin-left: 20px; /* Align with left border of the cards */
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
+  display: none !important;
 }
 
-.mobileConnector::after {
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 12px;
-  background: var(--blue);
-  border-radius: 2px;
-  left: 0;
-  top: -12px;
-  animation: travelVertical 3s linear infinite;
-}
-
-/* Hidden by default on Mobile */
 .desktopConnector {
-  display: none;
+  display: none !important;
 }
 
 .ctaWrapper {
@@ -143,16 +137,6 @@
   justify-content: center;
   margin-top: var(--space-10);
   width: 100%;
-}
-
-@keyframes travelVertical {
-  from { top: -12px; }
-  to   { top: 100%; }
-}
-
-@keyframes travelHorizontal {
-  from { left: -20px; }
-  to   { left: 100%; }
 }
 
 /* Tablet & Desktop media queries (min-width: 1024px) */
@@ -163,49 +147,23 @@
   }
 
   .stepsWrapper {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 16px;
+    align-items: stretch; /* equal height */
+    width: 100%;
   }
 
   .stepCard {
-    flex: 1;
-    min-height: 250px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
     padding: 32px 24px;
   }
 
   .watermark {
     top: -15px;
     right: 20px;
-  }
-
-  /* Desktop connector system enabled */
-  .desktopConnector {
-    display: block;
-    flex: 1;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.08);
-    position: relative;
-    overflow: hidden;
-    min-width: 20px;
-    margin: 0 var(--space-2);
-  }
-
-  .desktopConnector::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 3px;
-    background: var(--blue);
-    border-radius: 2px;
-    top: -1px;
-    left: -20px;
-    animation: travelHorizontal 3s linear infinite;
-  }
-
-  .mobileConnector {
-    display: none;
   }
 
   .ctaWrapper {

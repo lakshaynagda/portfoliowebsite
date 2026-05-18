@@ -9,7 +9,7 @@
 
 .container {
   width: 100%;
-  max-width: 700px; /* Centered 700px width */
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--section-padding-x);
   display: flex;

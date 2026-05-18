@@ -69,22 +69,21 @@ const Hero = () => {
 
         {/* Right Column - Desktop Only */}
         <motion.div 
-          className={styles.rightColumn}
+          className={styles.heroImageWrapper}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className={styles.imageWrapper}>
-            {/* Animated Glow Blob */}
-            <div className={styles.blobGlow}></div>
-            <img 
-              src={personal.heroImage} 
-              alt={personal.name} 
-              className={styles.heroImage} 
-              loading="eager"
-            />
-          </div>
+          <div className={styles.glowBehind} />
+          <img
+            src="https://res.cloudinary.com/da7ewmcje/image/upload/v1779130313/Canva_3_Year_only_for_Rs.199_2_g2kjnb.png"
+            alt="Lakshay Nagda"
+            className={styles.heroImg}
+            onError={(e) => {
+              e.target.style.display = 'none'; // agar load na ho toh hide karo
+            }}
+          />
         </motion.div>
       </div>
     </section>

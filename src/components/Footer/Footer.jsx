@@ -2,15 +2,21 @@ import React from 'react';
 import styles from './Footer.module.css';
 import data from '../../data/data.json';
 import {
-  FaGithub,
   FaLinkedin,
   FaInstagram,
-  FaXTwitter,
+  FaEnvelope,
   FaWhatsapp
 } from 'react-icons/fa6';
 
 const Footer = () => {
   const { footer, personal, social, navbar } = data;
+
+  const socialLinks = [
+    { icon: <FaLinkedin />,  href: social.linkedin,  label: "LinkedIn"  },
+    { icon: <FaInstagram />, href: social.instagram, label: "Instagram" },
+    { icon: <FaEnvelope />,  href: social.email,     label: "Email"     },
+    { icon: <FaWhatsapp />,  href: social.whatsapp,  label: "WhatsApp"  },
+  ];
 
   return (
     <footer className={styles.footerSection}>
@@ -19,29 +25,31 @@ const Footer = () => {
           {/* Column 1: Logo & Socials */}
           <div className={styles.col1}>
             <div className={styles.logoWrapper}>
-              <div className={styles.logoBox}>{navbar.logo}</div>
+              <img
+                src={personal.logo}
+                alt={personal.logoAlt}
+                className={styles.logoImg}
+              />
               <span className={styles.logoText}>{personal.name}</span>
             </div>
             <p className={styles.tagline}>{footer.tagline}</p>
 
             {/* Social Glass Circles */}
             <div className={styles.socialRow}>
-              <a href={social.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn">
-                <FaLinkedin />
-              </a>
-              <a href={social.instagram} target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
-                <FaInstagram />
-              </a>
-              <a href={social.twitter} target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Twitter">
-                <FaXTwitter />
-              </a>
-              <a href={personal.whatsappLink} target="_blank" rel="noopener noreferrer" className={`${styles.socialIcon} ${styles.whatsappIcon}`} aria-label="WhatsApp">
-                <FaWhatsapp />
-              </a>
+              {socialLinks.map((link, idx) => (
+                <a 
+                  key={idx}
+                  href={link.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={link.label === "WhatsApp" ? `${styles.socialIcon} ${styles.whatsappIcon}` : styles.socialIcon} 
+                  aria-label={link.label}
+                >
+                  {link.icon}
+                </a>
+              ))}
             </div>
           </div>
-
-          {/* Column 2: Quick Links */}
         </div>
 
         {/* Bottom copyright centered */}
