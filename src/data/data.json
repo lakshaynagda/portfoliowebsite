@@ -276,38 +276,24 @@
     "videos": [
       {
         "id": 1,
-        "clientName": "Rahul Sharma",
-        "clientRole": "E-commerce Founder",
-        "videoUrl": "/assets/testimonials/testimonial1.mp4",
-        "videoPoster": "/assets/testimonials/thumb1.jpg"
+        "clientName": "aerobicsyug",
+        "type": "video",
+        "videoUrl": "https://res.cloudinary.com/dwlzhb9r1/video/upload/q_auto/f_auto/v1779199283/VID-20260519-WA0047_irmsri.mp4",
+        "videoPoster": ""
       },
       {
         "id": 2,
-        "clientName": "Priya Mehta",
-        "clientRole": "Agency Owner",
-        "videoUrl": "/assets/testimonials/testimonial2.mp4",
-        "videoPoster": "/assets/testimonials/thumb2.jpg"
+        "clientName": "coach abhishek",
+        "type": "video",
+        "videoUrl": "https://res.cloudinary.com/dwlzhb9r1/video/upload/q_auto/f_auto/v1779198953/VID-20260519-WA0043_kbmldy.mp4",
+        "videoPoster": ""
       },
       {
         "id": 3,
-        "clientName": "Arjun Kapoor",
-        "clientRole": "SaaS Founder",
-        "videoUrl": "/assets/testimonials/testimonial3.mp4",
-        "videoPoster": "/assets/testimonials/thumb3.jpg"
-      },
-      {
-        "id": 4,
-        "clientName": "Sneha Joshi",
-        "clientRole": "Clinic Owner",
-        "videoUrl": "/assets/testimonials/testimonial4.mp4",
-        "videoPoster": "/assets/testimonials/thumb4.jpg"
-      },
-      {
-        "id": 5,
-        "clientName": "Vikram Singh",
-        "clientRole": "Real Estate Developer",
-        "videoUrl": "/assets/testimonials/testimonial5.mp4",
-        "videoPoster": "/assets/testimonials/thumb5.jpg"
+        "clientName": "stylecuesbyanugna",
+        "type": "image",
+        "videoUrl": "",
+        "videoPoster": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779198918/Screenshot_20260519_192209_WhatsApp_qrq4pt.jpg"
       }
     ]
   },

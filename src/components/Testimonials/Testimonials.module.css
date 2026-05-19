@@ -1,10 +1,8 @@
-.testimonialsSection {
+.section {
   width: 100%;
-  background-color: var(--bg-section-alt);
+  background: var(--bg-section-alt);
   padding: var(--section-padding-y) 0;
-  position: relative;
   overflow: hidden;
-  box-sizing: border-box;
 }
 
 .container {
@@ -12,245 +10,220 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--section-padding-x);
+  margin-bottom: 40px;
 }
 
 .headerRow {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-4);
-  margin-bottom: var(--space-6);
-}
-
-.header {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
 }
 
 .headline {
   font-family: var(--font-display);
   font-size: var(--text-3xl);
   font-weight: 800;
-  line-height: 1.1;
   color: var(--text-primary);
   text-align: left;
-  margin-bottom: var(--space-4);
-  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-bottom: 10px;
 }
 
 .subheadline {
-  font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--text-secondary);
-  line-height: 1.6;
   text-align: left;
-  max-width: 560px;
+  max-width: 500px;
+  line-height: 1.6;
 }
 
-/* Arrow controls hidden on mobile */
-.navButtons {
-  display: none;
-}
-
-/* Mobile swipe system */
-.mobileTrackWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+/* ========================
+   TRACK — centered on desktop
+   ======================== */
+.trackWrapper {
   width: 100%;
+  display: flex;
+  justify-content: center; /* CENTER the track */
 }
 
-.testimonialsTrack {
+.track {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  gap: 14px;
-  padding: 10px var(--section-padding-x) 20px var(--section-padding-x);
-  margin: 0 calc(0px - var(--section-padding-x));
-  width: calc(100% + calc(2 * var(--section-padding-x)));
-  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px 40px 20px 40px;
+  /* 40px padding both sides so cards dont stick to edges */
 }
 
-.testimonialCard {
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================
+   CARD — reel size vertical
+   ======================== */
+.card {
   flex-shrink: 0;
   width: 220px;
-  height: 380px;
-  border-radius: var(--card-radius);
+  height: 390px;
+  border-radius: 20px;
   overflow: hidden;
-  scroll-snap-align: center;
+  scroll-snap-align: center; /* center snap */
   position: relative;
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  background: rgba(255, 255, 255, 0.03);
-  cursor: pointer;
-  box-sizing: border-box;
+  background: #000;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Video fills card */
 .video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: #000;
+  display: block;
 }
 
-.cardOverlay {
+/* Bottom gradient overlay */
+.overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 45%;
+  height: 55%;
   background: linear-gradient(
     to top,
     rgba(5, 10, 20, 0.95) 0%,
-    rgba(5, 10, 20, 0.5) 60%,
+    rgba(5, 10, 20, 0.4) 55%,
     transparent 100%
   );
   z-index: 2;
   pointer-events: none;
 }
 
+/* Mute button — top right of each card */
+.muteBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 4;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(5, 10, 20, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: unset;
+  padding: 0;
+}
+
+.muteBtn:hover {
+  background: rgba(56, 189, 248, 0.3);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: var(--blue);
+}
+
+/* Name + Role bottom */
 .cardInfo {
   position: absolute;
   bottom: 18px;
-  left: 14px;
-  right: 14px;
+  left: 16px;
+  right: 16px;
   z-index: 3;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   pointer-events: none;
 }
 
 .clientName {
-  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 700;
   color: #ffffff;
+  font-family: var(--font-body);
 }
 
 .clientRole {
-  font-family: var(--font-body);
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-body);
 }
 
-.testimonialDots {
+/* ========================
+   DOTS
+   ======================== */
+.dots {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin-top: var(--space-3);
-  width: 100%;
+  margin-top: 24px;
+  padding: 0 var(--section-padding-x);
 }
 
-.testimonialDot {
+.dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   border: none;
-  transition: all 0.3s ease;
   cursor: pointer;
   padding: 0;
-  min-height: auto;
+  min-height: unset;
+  transition: all 0.3s ease;
 }
 
-.activeDot {
-  width: 20px;
+.dotActive {
+  width: 22px;
   border-radius: 3px;
   background: var(--blue);
 }
 
-/* Tablet & Desktop media queries (min-width: 1024px) */
-@media (min-width: 1024px) {
-  .headerRow {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: var(--space-8);
-  }
+/* Screenshot image card */
+.screenshotImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* show top of screenshot */
+  display: block;
+}
 
+/* ========================
+   DESKTOP — bigger cards
+   ======================== */
+@media (min-width: 1024px) {
   .headline {
     font-size: var(--text-4xl);
-    letter-spacing: -1px;
   }
 
-  .navButtons {
-    display: flex;
-    gap: var(--space-3);
-    margin-bottom: var(--space-4);
+  .card {
+    width: 260px;
+    height: 460px;
   }
 
-  .navBtn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--glass-border);
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-
-  .navBtn:hover {
-    background: rgba(56, 189, 248, 0.08);
-    border-color: var(--blue-border);
-    color: var(--blue);
-    transform: translateY(-2px);
-  }
-
-  /* Desktop Carousel Container */
-  .carouselContainer {
-    position: relative;
-    height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: var(--space-10) 0;
-    width: 100%;
-    overflow: visible;
-  }
-
-  .desktopCard {
-    position: absolute;
-    border-radius: var(--card-radius-lg);
-    overflow: hidden;
-    background: var(--bg-card);
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-
-  .bottomOverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 20px 20px;
-    background: linear-gradient(to top, rgba(5, 10, 20, 0.85) 0%, transparent 100%);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .desktopCard .clientName {
-    font-size: var(--text-sm);
-    font-weight: 700;
-    color: #ffffff;
-  }
-
-  .desktopCard .clientRole {
-    font-size: var(--text-xs);
-    color: var(--text-secondary);
+  .track {
+    gap: 20px;
+    padding: 20px 80px 30px 80px;
+    /* more padding on desktop so cards centered */
   }
 }
