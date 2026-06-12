@@ -9,7 +9,7 @@
     "email": "lakshya18n@gmail.com",
     "whatsapp": "+91-8112256981",
     "whatsappLink": "https://wa.me/918112256981",
-    "calendlyLink": "https://calendly.com/lakshaynagda",
+    "calendlyLink": "https://calendly.com/lakshya18n/30min",
     "heroImage": "/assets/images/lakshay.png",
     "customCodeBadge": "100% Custom Code — No Templates. No Themes. Just Yours.",
     "logo": "https://res.cloudinary.com/da7ewmcje/image/upload/v1779130313/Canva_3_Year_only_for_Rs.199_2_g2kjnb.png",
@@ -23,20 +23,12 @@
   },
   "stats": [
     {
-      "number": "10+",
+      "number": "20+",
       "label": "Projects Delivered"
     },
     {
-      "number": "2x",
-      "label": "Avg ROI"
-    },
-    {
-      "number": "95%",
+      "number": "98%",
       "label": "Client Satisfaction"
-    },
-    {
-      "number": "10+",
-      "label": "Hrs Saved/Week"
     }
   ],
   "techStack": [
@@ -197,43 +189,81 @@
   "projects": {
     "headline": "Built by Us.",
     "subheadline": "Real projects. Real results. All custom-built from scratch.",
+    "categories": ["Websites", "Apps", "Automation"],
     "items": [
       {
         "id": 1,
         "title": "Yoga Coach Website",
+        "category": "Websites",
+        "subtext": "",
         "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020901/Screenshot_2026-05-17_175321_mx0kgm.png",
         "liveUrl": "https://www.aerobicsyug.in/"
       },
       {
         "id": 2,
         "title": "Life Coach Website",
+        "category": "Websites",
+        "subtext": "",
         "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020919/Screenshot_2026-05-17_175314_pevdpd.png",
         "liveUrl": "https://www.sukeeshi.com/"
       },
       {
         "id": 3,
         "title": "Style Cues by Anugna",
+        "category": "Websites",
+        "subtext": "",
         "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020912/Screenshot_2026-05-17_175258_jkrwkv.png",
         "liveUrl": "https://www.stylecuesbyanugna.com/"
       },
       {
         "id": 4,
         "title": "Community Website",
+        "category": "Websites",
+        "subtext": "",
         "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020920/Screenshot_2026-05-17_175250_a5kqrj.png",
-        "liveUrl": "https://powerpack-blue.vercel.app/"
+        "liveUrl": "https://powerpackcommunity.com/"
       },
       {
         "id": 5,
         "title": "Fitness Coach Website",
+        "category": "Websites",
+        "subtext": "",
         "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020899/Screenshot_2026-05-17_175306_mvptvr.png",
         "liveUrl": "https://coachabhi.vercel.app/"
       },
       {
         "id": 6,
         "title": "Portfolio Website",
+        "category": "Websites",
+        "subtext": "",
         "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779020921/Screenshot_2026-05-17_175332_dak7jh.png",
         "liveUrl": "https://www.kunalgupta.site/"
+      },
+      {
+        "id": 7,
+        "title": "Daisy – AI Journaling App",
+        "category": "Apps",
+        "subtext": "Talk to your journal. It actually listens, learns & remembers. Cross-platform journal app with AI-powered search & insights",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1781263678/day_1_cbsmnp.png",
+        "liveUrl": ""
+      },
+      {
+        "id": 8,
+        "title": "MedVault – Prescription & Medicine Reminder App",
+        "category": "Apps",
+        "subtext": "Medical records app with smart reminders & secure prescription storage",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1781263644/medvault_vtfoxh.png",
+        "liveUrl": ""
+      },
+      {
+        "id": 9,
+        "title": "Leadforage ai Outreach System",
+        "category": "Automation",
+        "subtext": "Auto-scrapes leads, builds their website audit & sends personalized outreach — on autopilot. Scores every lead, finds their pain points & fires a personalized WhatsApp message automatically",
+        "thumbnail": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1781266961/ChatGPT_Image_Jun_12_2026_05_13_21_PM_shf0ug.png",
+        "liveUrl": ""
       }
+  
     ]
   },
   "process": {
@@ -294,6 +324,13 @@
         "type": "image",
         "videoUrl": "",
         "videoPoster": "https://res.cloudinary.com/dwlzhb9r1/image/upload/q_auto/f_auto/v1779198918/Screenshot_20260519_192209_WhatsApp_qrq4pt.jpg"
+      },
+      {
+        "id": 4,
+        "clientName": "sukeeshi",
+        "type": "video",
+        "videoUrl": "https://res.cloudinary.com/dwlzhb9r1/video/upload/q_auto/f_auto/v1781261353/WhatsApp_Video_2026-06-12_at_16.16.53_pnal7r.mp4",
+        "videoPoster": ""
       }
     ]
   },

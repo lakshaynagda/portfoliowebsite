@@ -132,6 +132,12 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  }
+}
+
 .statCard {
   padding: 14px 16px;
   display: flex;
@@ -225,7 +231,8 @@
   }
 
   .statsGrid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr; /* desktop bhi 2 columns */
+    max-width: 400px; /* compact width since only 2 stats */
     gap: var(--space-4);
     margin-top: var(--space-4);
   }

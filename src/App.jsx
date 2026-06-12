@@ -18,8 +18,8 @@ function App() {
         <Hero />
         <TechStrip />
         <PainPoints />
-        <Services />
         <Projects />
+        <Services />
         <Process />
         <Testimonials />
         <Contact />
